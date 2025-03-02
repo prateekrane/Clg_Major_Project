@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Proton</title>
+    <title>Friday AI Assistant</title>
     <script type="text/javascript" src="/eel.js"></script>
     <link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- header -->
+    <div class="background-overlay"></div>
+    
+     Header 
     <header>
-        <div class = "header-wrapper">
-          <p class="awesome">PROTON Welcomes you!</p>
-            <div class = "logo">
-                <img src= "images/icon.png"  width="35" height="33">
+        <div class="header-wrapper">
+            <div class="logo">
+                <img src="../web/images/A_logo.png" alt="AI Assistant Logo" width="40" height="40">
+                <h1 class="awesome">FRIDAY AI ASSISTANT</h1>
+            </div>
+            <div class="header-controls">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-cog"></i>
             </div>
         </div>
     </header>
-    <!-- ChatBot -->
-    <div class="chat_icon">
-        <i class="fa fa-comments" aria-hidden="true"></i>
-    </div>
 
-    <div class="chat_box">
-        
-            <div class="conv-form-wrapper" style="height:auto;">
-                <div id="messages" style="overflow-y:auto;height:400px;">
-                    </br></br>                    
+     Main Chat Interface 
+    <div class="main-container">
+         ChatBot 
+        <div class="chat_box">
+            <div class="chat-background"></div> 
+            <div class="chat-header">
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+                <span>Chat with Friday</span>
+            </div>
+            
+            <div class="conv-form-wrapper">
+                <div id="messages">
+                    <div class="welcome-message">
+                        <div class="ai-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <p>Hello! I'm Friday, your AI assistant. How can I help you today?</p>
+                    </div>
                 </div>
             </div>
             
-            <div id="convForm" class="convFormDynamic" style="height:50px;position:absolute;left:10px;bottom:0px;margin:5px;">
+            <div id="convForm" class="convFormDynamic">
                 <div class="options dragscroll"></div>
-                <input type="text" id="userInput" placeholder="Type Here" class="userInputDynamic" style="margin: 7px 7.575px 7px 10px; width: 219px; height: 24px;">
-                <button id="userInputButton" type="button" class="submit" style="margin-top:9px">▶</button>
-                <span class="clear"></span>
+                <div class="input-group">
+                    <i class="fas fa-microphone"></i>
+                    <input type="text" id="userInput" placeholder="Type your message here...">
+                    <button id="userInputButton" type="button" class="submit">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
             </div>
-
         </div>
-    
+    </div>
 </body>
-    <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </html>
+
